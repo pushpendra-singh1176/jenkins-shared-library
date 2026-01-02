@@ -1,6 +1,4 @@
 def call() {
-    dependencyCheck additionalArguments: '--scan . --failOnCVSS 7',
-                    odcInstallation: 'dependency-check'
-
+    dependencyCheck additionalArguments: '--scan ./', odcInstallation: 'OWASP'
     dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
 }
