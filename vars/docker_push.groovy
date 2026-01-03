@@ -3,7 +3,7 @@ def call(Map config = [:]) {
     def imageName  = config.imageName ?: error("imageName required")
     def imageTag   = config.imageTag ?: "latest"
     def dockerUser = config.dockerUser ?: error("dockerUser required")
-    def credsId    = config.credsId ?: "dockerhub-creds"
+    def credsId    = config.credsId ?: "docker"
 
     echo "Pushing image: ${dockerUser}/${imageName}:${imageTag}"
 
